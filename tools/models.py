@@ -9,3 +9,10 @@ class PdfDocument(models.Model):
     document = models.FileField(upload_to='pdfs/')
     dpi = models.IntegerField()
     uploaded_at = models.DateTimeField(auto_now_add=True)
+
+
+class JpegOptimize(models.Model):
+    file_name = models.CharField(max_length=64, default='somefile')
+    document = models.FileField(upload_to='jpegs/')
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+    wanted_size = models.IntegerField()

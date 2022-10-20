@@ -1,0 +1,7 @@
+{% block content %}
+<form action="{% url 'jpeg_optimize' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" value="Upload">Оптимизировать</button>
+</form>
+{% endblock %}
